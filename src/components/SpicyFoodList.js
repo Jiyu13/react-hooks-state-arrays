@@ -14,7 +14,24 @@ function SpicyFoodList() {
 
 
   function handleLiClick(id) {
-    const newFoodArray = foods.filter(food => food.id !== id)
+
+    // remove array element
+    // const newFoodArray = foods.filter(food => food.id !== id)
+    // setFoods(newFoodArray)
+
+
+    // update elements in arrays
+    const newFoodArray = foods.map(food => { // map literates througe each item in arr, return new arr
+      if (food.id === id) {
+        return {
+          ...food, 
+          heatLevel: food.heatLevel+1
+        }
+      } else {
+        return food
+      }
+    })
+
     setFoods(newFoodArray)
   }
 
