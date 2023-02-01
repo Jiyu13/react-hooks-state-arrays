@@ -60,10 +60,11 @@ function SpicyFoodList() {
       return food.cuisine === filterBy
     }
   })
+  console.log(foodsToDisplay)
 
   // 4.4 use foodsToDisplay to generate <li>s
   const foodList = foodsToDisplay.map((food) => (
-    <li key={food.id} onclick={() => handleLiClick(food.id)}>
+    <li key={food.id} onClick={() => handleLiClick(food.id)}>
       {food.name} | Heat: {food.heatLevel} | Cuisine: {food.cuisine}
     </li>
   ))
