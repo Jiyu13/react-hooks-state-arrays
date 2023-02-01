@@ -68,6 +68,7 @@ function SpicyFoodList() {
       {food.name} | Heat: {food.heatLevel} | Cuisine: {food.cuisine}
     </li>
   ))
+  console.log(foodList)
 
   return (
     <div>
